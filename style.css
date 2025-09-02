@@ -1,0 +1,400 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #f0f4f8, #e5e9ec);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af; /* azul */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ef4444; /* vermelho suave */
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #1e40af;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  list-style: none;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+}
+
+.mobile-menu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu li a:hover {
+  background-color: #f3f4f6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1b1bc3 0%, #b6abc1 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-yellow {
+  background-color: #facc15;
+  color: black;
+}
+
+.btn-yellow:hover {
+  background-color: #eab308;
+}
+
+.btn-blue {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #1d4ed8;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.blink {
+  animation: blink 2s infinite;
+}
+
+.courses {
+  background: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.course-card {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.course-card p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.about {
+  background: #f3f4f6;
+  padding: 5rem 0;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.contact {
+  background: white;
+  padding: 5rem 0;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  max-width: 400px;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.contact-info h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e40af;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.footer {
+  background: #1e40af;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+}
+
+.fechar-btn:hover {
+    background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .course {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+        .fechar-btn:hover {
+            background-color: #c82333;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .course {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+
